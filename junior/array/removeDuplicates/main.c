@@ -7,7 +7,7 @@ void main()
 {
 	int numArray[] = {1,2,3,4,4,5,5,6,6};
 	int i = 0;
-	int len = removeDuplicates(&numArray,sizeof(numArray));
+	int len = removeDuplicates(&(numArray[0]),sizeof(numArray)/sizeof(numArray[0]));
 	if(len > 0){
 		printf("removeDuplicates numArray len = %d \n",len);
 		for(i = 0; i < len; i++){
