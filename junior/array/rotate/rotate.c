@@ -2,6 +2,7 @@
 #define NULL ((void *)0)
 
 //O(n)
+//need to prove traverse nums whole collection
 void rotaten(int* nums, int numsSize, int k) {    
 	int i = 0;
 	int index = 0;
@@ -53,6 +54,11 @@ void rotatenn(int* nums, int numsSize, int k) {
 
 
 //O(N)
+//y = (x + k) % n
+//y = x + k; x + k < n
+//y = x + k - n; x +k > n
+//y = n - (n-k-x); (x < n - k)
+//y = k - (n - x);   (x > n - k)
 
 void reverse(int *array,int len){
 	int i = 0;
