@@ -1,12 +1,26 @@
+#ifndef NULL
+#define NULL ((void *)0)
+#endif
+#ifndef null
+#define null ((void *)0)
+#endif
+
+static int dcomp(int a,int b){
+	return (a <= b ? 0 : 1);
+}
+		
 
 static void swap(int* a,int* b){
 	int temp = *a;
-	*a = *b;
+	*a = *b;	
 	*b = temp;
 }
 
 void bsort(int* nums, int numsSize,int (*comp)(const int,const int)) {
 	int i,j;
+	if(comp == NULL){
+		comp = dcomp;
+	}
 	for( i = 0; i < numsSize; i++){
 		for(j = i; j < numsSize; j++){
 			if((*comp)(nums[i],nums[j]) > 0){
@@ -20,6 +34,9 @@ int partition(int *nums,int left,int right,int (*comp)(const int,const int)){
 	int privot = nums[right];
 	int tail = 	left - 1;
 	int i;
+	if(comp == NULL){
+		comp = dcomp;
+	}
 	for(i = left; i < right; i++){
 		if((*comp)(nums[i], privot) == 0){
 			swap(&nums[++tail],&nums[i]);
