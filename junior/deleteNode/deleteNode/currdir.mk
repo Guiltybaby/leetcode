@@ -2,13 +2,12 @@
 LOCAL_DIR := $(call my-dir)
 include $(CLEAR_VAR)
 
-LOCAL_SRC_FILE:= sort.c
-LOCAL_MODULE:= sort
-LOCAL_TARGET_SUFFIX:=.a
-LOCAL_STATIC_LIBRARIES:= 
+LOCAL_SRC_FILE:=main.c deleteNode.c
+LOCAL_MODULE:= deleteNode
+LOCAL_TARGET_SUFFIX:=.exe
+LOCAL_STATIC_LIBRARIES:= libsLinkList
 LOCAL_SHARED_LIBRARIES:= 
 LOCAL_LD_FLAGS:= -Wl,--gc-sections
-LOCAL_EXPORT_INC_PATH:=$(LOCAL_DIR)/inc
 
 include $(BUILD_MODULE)
 
