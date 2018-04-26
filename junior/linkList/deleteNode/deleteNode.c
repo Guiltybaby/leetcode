@@ -11,8 +11,8 @@
 void deleteNode(struct ListNode* node) {
     struct ListNode* tmp = node;
 	if(tmp->next != NULL){
-	tmp->val = tmp->next->val;
-	tmp->next = tmp->next->next
+		tmp->val = tmp->next->val;
+		tmp->next = tmp->next->next;
 	}
 	return;
 }
