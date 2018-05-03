@@ -35,6 +35,7 @@ int rob(int* nums, int numsSize) {
 
 	dp[0] = 0;
 	dp[1] = nums[0];
+	max = nums[0];
 	for(i = 2; i <= numsSize; i++){
 		max = MAX(dp[1],dp[0] + nums[i - 1]);
 		dp[0] = dp[1];
