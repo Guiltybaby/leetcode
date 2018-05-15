@@ -1,0 +1,14 @@
+#by jeff
+LOCAL_DIR := $(call my-dir)
+include $(CLEAR_VAR)
+
+LOCAL_SRC_FILE:= mystack.c
+LOCAL_MODULE:= mystack
+LOCAL_TARGET_SUFFIX:=.a
+LOCAL_STATIC_LIBRARIES:= 
+LOCAL_SHARED_LIBRARIES:= 
+LOCAL_LD_FLAGS:= -Wl,--gc-sections
+LOCAL_EXPORT_INC_PATH:=$(LOCAL_DIR)/inc
+
+include $(BUILD_MODULE)
+
