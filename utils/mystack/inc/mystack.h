@@ -23,7 +23,7 @@ do{ \
 }while(0)
 
 #define STACK_IS_EMPTY(stack) \
-((stack)->top > ((stack)->bottom)) 
+((stack)->top < ((stack)->bottom)) 
 
 #define STACK_GET_TOP(stack) \
 ((stack)->top) 
@@ -50,6 +50,9 @@ do{ \
 	free((stack)->bottom);\
  	free((stack)); \
 }while(0)
+
+#define STACK_DATA_SIZE(stack)\
+(stack->top - stack->bottom + 1)
 
 
 #endif
